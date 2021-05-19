@@ -27,10 +27,10 @@ body{
 
 #myVideo {
   position: relative;
-  margin-top: 150px;
+  margin-top: 170px;
   margin-left: 40%;
-  width: 55%;
-  height: 450px;
+  width: 50%;
+  height: 600px;
 }
 
 #section1{
@@ -207,9 +207,16 @@ font-size: 20px;
 
 .gallery{
 top: 50px;
-width: 80%;
+margin-top: 30px;
 display: grid;
 grid-template-columns: auto auto;
+text-align: center;
+}
+
+.gallery-item{
+  width:100%;
+  height:100%;
+  object-fit: cover;
 }
 
 .container {
@@ -253,6 +260,12 @@ grid-template-columns: auto auto;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   text-align: center;
+}
+
+.info-4{
+  width: 800px;
+  padding-left: 20%;
+  padding-top: 150px;
 }
 
 footer{
