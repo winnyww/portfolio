@@ -27,15 +27,15 @@ body{
 
 #myVideo {
   position: relative;
-  margin-top: 170px;
+  margin-top: 150px;
   margin-left: 40%;
-  width: 50%;
-  height: 600px;
+  width: 55%;
+  height: 450px;
 }
 
 #section1{
     position: absolute;
-    width: 370px;
+    width: 350px;
     margin-left: 10%;
     top: 220px;
 }
@@ -45,7 +45,7 @@ body{
   width: 50%;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 180px;
+  margin-top: 200px;
 }
 
 /* #navbar {
