@@ -86,9 +86,9 @@ font-size: 18px;
 
 #main-pic{
 position: relative;
-margin-left: 45%;
+margin-left: 50%;
 margin-top: 170px;
-width: 50%;
+width: 45%;
 height: auto;
 object-fit: cover;
 }
