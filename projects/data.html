@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Project View - Thriving Green Power</title>
+
+    <link rel="stylesheet" href="/style.css" />
+
+    <style>
+      mark {
+      background: linear-gradient(120deg, #3bf4fb 0%, #ccff33 100%);
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      background-position: 0 70%;
+      }
+    </style>
+
+  </head>
+
+  <body>
+    <div style="background-color: transparent;height: 5vh;margin: 0 0 5vh 0;">
+          <div style="position: fixed; display: flex; padding: 20px; color: #343a40;
+                      overflow: hidden;background-color:transparent;">
+              <div style="margin-left: 2vw;">
+                <a href="/index.html">
+                  <img src="/projects/pictures/logo.png" style="width:80px;">
+                </a>
+              </div>
+              <!-- <div style="margin-left: 75vw">
+                <ul class="breadcrumb">
+                  <li><a href=""></a></li>
+                  <li><a href="intro.html">About</a></li>
+                  <li><a href=""></a></li>
+              </ul>
+              </div> -->
+          </div>
+        </div>
+
+    <!-- lines + intro -->
+
+      <div style="width: 90vw; margin: 15vh 5vw 10vh 5vw; background-color:transparent;display: flex;">
+        <div style="width: 30vw; padding: 10vh 5vw; text-align:left;background-color: transparent;">
+          <h3 style="font-size: 35px;">Sentimental Data: <br>Visualizing Wiki-edits</h3>
+          <p style="font-size: 20px;">
+            Sentimental Data focuses on the information revisions of the English Wikipedia page and unpacks 
+            Wikipedia’s gigantic digital storage and reveals the human touch of it. 
+            <br></br>
+            It intends to tell a story of Wikipedia edit history, dissecting one of the world’s biggest 
+            data storage and retracing the voice of individual contributors. 
+          </p>
+        </div>
+          <img src="pictures/data-story.jpg" style="width: 60vw; height: 70vh; object-fit: cover;"></img>
+      </div>
+
+
+
+      <!-- video  -->
+ 
+
+      <!-- video  -->
+
+        <iframe src="https://player.vimeo.com/video/652043532?h=386b958612" 
+        style="width: 60vw; height: 80vh; margin: 10vh 20vw 20vh 20vw;"
+         frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+
+
+      <!-- background -->
+
+        <div style="width: 80vw; margin-left: 10vw; display: flex;">
+          <div style="width: 25vw; padding: 20px; margin-right: 30px;">
+            <h2 style="font-size: 30px;">Background</h2>
+          </div>
+
+          <div style="width: 55vw; padding: 15px;">
+            <p style="font-size: 20px;">
+              <b>Context: </b>The English Wikipedia page is undoubtedly one of the richest, most active free online encyclopedias. 
+              It is also <span id="link">a collective construction of a virtual community </span>where editors collaborate, argue, or gain 
+              a global reputation by their contribution to Wikipedia. When each Wikipedian edits the data, they 
+              potentially <span id="link">leave their own sentiments and bias in the public revision history. </span>
+              <br><br>
+              <b>Goal: </b>With its medium as an interactive webpage, this project intends to <span id="link">build a narrative that starts 
+              from the macro perspective and arrives at the micro.</span> It first maps out English Wikipedia as an international 
+              enormous project through the total number of revisions and most active editors by country, then it dives into 
+              specific content including most edited pages and what has been changed on a certain page.
+
+            </p>
+          </div>
+        </div>
+
+      <!-- Project Design -->
+
+        <div style="width: 80vw; margin: 10vh 10vw 0vh 10vw; display: flex;">
+          <div style="width: 25vw; padding: 20px; margin-right: 30px;">
+            <h2 style="font-size: 30px;">Research & Design</h2>
+          </div>
+
+          <div style="width: 55vw; padding: 15px;">
+          <p style="font-size: 20px;">
+            I first researched on <b>the goal of Wikipedia</b>: an evolving, collective Encyclopedia. 
+            Since the beginning, Wikipedia aims at <span id="link">developing, maintaining and protecting open content to the public free of charge.</span>
+            As a project to allow contribution on online articles, when a user logs in, he or she will have a user-page to introduce 
+            themselves; when they make a revision on articles, their edit would be recorded and listed in the article’s version 
+            history where one can highlight differences between versions. 
+            <br><br>
+            <b>However,</b> opinions are highly mixed regarding to what extent has Wikipedia reached this goal as well as whether 
+            the content is of good quality. It is worth noting that Wikipedia presents <span id="link">a model of "democratized information,"
+            including collective wisdom but not excluding inaccuracies, bias and even vandalisms, purposefully or not.</span> In a way, 
+            studying the Wikipedia revision history can be more than studying the accumulation and transformation of knowledge, but 
+            rather a documentation of human behaviors when each user has the power of controlling a page accessible to almost the 
+            entire world.
+            <br><br>
+
+            <br><br>
+            I have four datasets which are collected, analyzed and
+            published openly by Wikimedia Foundation, they are respectively:
+
+            <li style="font-size: 20px;">The number of <mark>daily total edits</mark> from April 2011 to March 2021
+              <br>
+            (e.g. 2011-04-28 | 163106 edits)</li>
+            <br>
+            <li style="font-size: 20px;"><mark>Active editors</mark> by country from 2018 to 2021
+              <br>
+              (e.g. US | 26010 editors | 2018)</li>
+              <br>
+            <li style="font-size: 20px;"><mark>Most edited 100 pages</mark> every month from 2011 to 2021
+              <br>
+              (e.g. page “Osama bin Laden” | 1542 edits | rank 23 | 2011-5 )</li>
+              <br>
+            <li style="font-size: 20px;">Detailed <mark>revision history</mark> of article “World War II” from Dec 2018 to April 2021
+              <br>
+            (e.g. user name, timestamp, a short comment why he/she made the change)</li>
+            <br><br>
+            <p style="font-size: 20px;">            Either it is biased information or purposeful interruption, the nature of individual contribution <span id="link">has defined the 
+            digital project of Wikipedia with a sense of <b>human touch.</b></span> It is simply not possible to avoid irrational behavior or 
+            limitation that both originate from individuals or the society.
+          </p>
+          <br><br>
+          <br><br>
+            </p>
+          </div>
+        </div>
+
+        <!-- Outcome -->
+
+        <div style="width: 80vw; margin: 0vh 10vw 20vh 10vw; display: flex;">
+          <div style="width: 25vw; padding: 20px; margin-right: 30px;">
+            <h2 style="font-size: 30px;">Outcome</h2>
+          </div>
+  
+          <div style="width: 55vw; padding: 15px;">
+            <p style="font-size: 20px;">
+              Together, this project takes its users on an adventure to explore Wikipedia in a macro-to-micro perspective, 
+              providing a fresh point of view to understand this digital tool existing everywhere in our life.
+
+            </p>
+          </div>
+        </div>
+
+        <!-- photos -->
+        <div style="width: 80vw; margin-left: 10vw;">
+
+
+          <img src="pictures/data-2.jpg" style="width: 60vw; margin-top: 5vh; margin-left: 19vw;"></img>
+          <img src="pictures/data-3.jpg" style="width: 60vw; margin-top: 5vh; margin-left: 0vw;"></img>
+
+          <img src="pictures/data-4.jpg" style="width: 60vw; margin-top: 5vh; margin-left: 19vw;"></img>
+          <img src="pictures/data-5.jpg" style="width: 60vw; margin-top: 5vh; margin-left: 0vw;"></img>
+
+      </div>
+
+
+      <br>
+      <!-- reference -->
+      <div style="width: 80vw; margin: 20vh 10vw 20vh 10vw;">
+        <h2>references</h2>
+        <p>datasets are from <a href="https://stats.wikimedia.org/#/metrics/en.wikipedia.org">Wikimedia Foundation</a></p>
+        <p>a contextual report for this project can be found <a href="https://docs.google.com/document/d/1MKBUI7lzLXTQ_Y1TGfJ4UNSYMb9dphNp1Qv3mRm-oeQ/edit?usp=sharing">here</a></p>
+       </div>
+    
+
+ 
+
+        <br>
+
+  
+
+  </body>
+<br>
+<br>
+<br>
+<br>
+</html>

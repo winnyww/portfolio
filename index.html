@@ -1,313 +1,252 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>portfoilo</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-		<link rel="author" href="https://plus.google.com/u/0/109859280204979591787/about"/>
+    <title>new Portfolio</title>
+    <link rel="stylesheet" href="/style.css" />
 
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <script src="/libs/stats.min.js"></script>
+    <script src="/libs/dat.gui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js" crossorigin="anonymous"></script>
+    <script src="/libs/three.js"></script>
+    <script type="module" src="/libs/OrbitControls.js"></script>
+    
+    
+    <script src="script.js"></script>
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Gentium+Book+Basic&display=swap" rel="stylesheet"> -->
+  </head>
 
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main.css">
-        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
-        <style type="text/css">
-      h{
-        color: #231F44;
-        font-family: 'Oswald', sans-serif;
-      }
-      h1{
-        color: #231F44;
-        font-family: 'Oswald', sans-serif;
-      }
-      h2{
-        color: #231F44;
-        font-family: 'Noto Serif SC', serif;
-      }
-      h3{
-        color:##231F44;
-        font-family: 'Oswald', sans-serif;
-        font-size: 25px;
-        text-shadow: 2px 3px #f9c74f;
-      }
-      p{font-family: 'Oswald', sans-serif;
-      text-align: left;
-      width: 580px;
-      font-size: 17px;
-      line-height: 1.8;
-      }
-	     </style>
-    </head>
-    <body class="loading">
-        <div class="menu" id="header1">
-          <a href="indro.html">
-            <img src="pictures/logo.png" alt="HTML tutorial" style="width:80px;">
-          </a>
+  <style>
+    a:link {
+      color: #343a40;
+      text-decoration: none;
+    }
+    a:visited {
+      color: #343a40;
+      text-decoration: none;
+    }
+    #link{
+      background: linear-gradient(120deg, #3bf4fb 0%, #ccff33 100%);
+      background-repeat: no-repeat;
+      background-size: 0% 20%;
+      background-position: 0% 90%;
+    }
+    #link:hover {
+      background-size: 110% 20%;
+      background-position: 0% 90%;
+      transition:all ease 0.3s;
+    }
+
+    .highlight {
+      background: linear-gradient(120deg, #3bf4fb 0%, #ccff33 100%);
+      background-repeat: no-repeat;
+      background-size: 100% 30%;
+      background-position: 0 70%;
+    }
+    .container{
+      position: relative;
+      width: 45w;
+      height: 70vh;
+    }
+    .overlay {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      opacity: 0;
+      transition: .3s ease;
+      background: linear-gradient(120deg, #3bf4fb 0%, #ccff33 100%);
+    }
+    .container:hover .overlay {
+      opacity: 0.9;
+    }
+
+    .text {
+      color: black;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+  </style>
+  <body>
+      
+  <!-- content -->
+      
+ 
+        <div style="background-color: transparent;height: 60vh;margin: 0 0 20vh 0;">
+          <div style="position: absolute; display: flex; padding: 20px; color: #343a40;
+                      overflow: hidden;background-color:transparent;">
+              <div style="margin-left: 1vw;">
+                <a href="index.html">
+                  <img src="/projects/pictures/logo.png" style="width:80px;">
+                </a>
+              </div>
+              <div style="margin-left: 85vw;">
+                <a href="https://www.linkedin.com/in/winny-wang-b6384a171/">
+                  <img src="/projects/pictures/linkedin.png" style="width:40px;">
+                </a>
+                <!-- <ul class="breadcrumb" >
+                  <li><a href=""></a></li>
+                  <li><a href="/projects/intro.html"></a></li>
+                  <li><a href=""></a></li>
+                </ul> -->
+              </div>
+          </div>
+
+          <div style="padding: 30vh 15vw  20vw; text-align: center;">
+            <p style="font-size: 40px;">Hello! I'm an innovative designer & researcher <br> 
+              <span class="highlight">shaping meaningful thoughts into realities.</span></p>
+            <br>
+            <p style="font-size: 20px;">
+              &#160 | &#160<a href="/projects/MirrorLoss.html" id="link">installation</a> 
+               | &#160<a href="/projects/PlasticBooth.html" id="link">rethink space</a> 
+               | &#160<a href="/projects/Mask.html" id="link">wearable</a>
+               | &#160<a href="/projects/3D.html" id="link">computational object</a>
+               | &#160<a href="/projects/data.html" id="link">data visualization</a> 
+               &#160 | &#160
+               <!-- | &#160<a href="#section5" id="link">music interface</a> -->
+               <br> 
+               ongoing: | &#160<a href="/projects/UX.html" id="link">web ux design</a>
+               <!-- | &#160<a href="" id="link">immersive experience of disabilities</a> -->
+               | &#160</p>
+          </div>
         </div>
-        <div class="menu" id="header2">
-          <ul class="breadcrumb">
-            <li><a href="#section1"></a></li>
-            <li><a href="intro.html">About</a></li>
-            <li><a href="#section3"></a></li>
-          </ul>
-        </div>
-
-<style>
-#loader {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  z-index: 1;
-  -webkit-animation: spin 2s linear infinite;
-  animation: spin 2s linear infinite;
-  margin: -75px 0 0 -75px;
-  border: 8px solid transparent;
-  border-radius: 50%;
-  border-top: 8px solid #231F44;
-  border-bottom: 8px solid #231F44;
-  width: 50px;
-  height: 50px;
-}
-@-webkit-keyframes spin {
-  0% { -webkit-transform: rotate(0deg); }
-  100% { -webkit-transform: rotate(360deg); }
-}
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-</style>
-</head>
-<body onload="myFunction()" style="margin:0;">
-<div id="loader"></div>
-
-          <script>
-          var myVar;
-          function myFunction() {
-            myVar = setTimeout(showPage, 3000);
-          }
-          function showPage() {
-            document.getElementById("loader").style.display = "none";
-            document.getElementById("myDiv").style.display = "block";
-          }
-          </script>
-
-<div style="display:none;" id="myDiv" class="main">
-
-	        <section id="fadeInAnim">
-	        	<div class="section-content">
-              <video autoplay muted loop id="myVideo">
-                <source  src="video/video.mp4">
-                Your browser does not support HTML5 video.
-              </video>
-	        	</div>
-            <div class="copy-container" style="text-align: left;line-height: 0.8;height:100px;margin-left: 0px;top: 60%;">
-                   <h style="font-size: 55px;color: white;">Winny Wang</h>
-                   <br></br>
-                   <h1 style="font-size: 25px;color: white;">Every idea is a drop of water, welcome to my ocean.</h1>
-                   <h2 style="font-size: 25px;color: white;">每个创意都是一滴水。滴水汇川。</h2>
+    
+        <div id="section1" style="height: 70vh;padding: 10vh 4.5vw 2vh 4.5vw; display: flex;flex-wrap: none;">
+          <a href="/projects/MirrorLoss.html">
+           <div class="container">
+            <img src="projects/pictures/mirror.JPG" style="object-fit: cover;width: 45vw; height: 70vh;">
+              <div class="overlay">
+                <div class="text" >
+                  <h1 style="font-size: 30px; line-height: 0.2;">Mirroring Loss</h1>
+                  <p style="font-size: 20px;">an interactive installation to mourn covid deaths</p>
+              </div>
             </div>
-		      </section>
-
-          <section class="page" id="p2">
-              <div class="section-content" style="background-color: #f5f5f5;">
-                <div class="copy-container2">
-                  <h style="font-size: 35px;">Undergraduate Capstone Project</h>
-                  <h1 style="font-size: 23px;">my first installation! - will be exhibited at Shanghai M50</h1>
-                </div>
-                <div class="images-container">
-                    <a href="index7.html">
-                      <div class="project">
-                        <img src="pictures/cap-1.JPG" style="width: 750px; height: 350px; object-fit: cover;">
-                        <div class="text"><h1 style="text-shadow: 2px 3px #90e0ef;font-size: 18px;">MIRRORING LOSS</h1></div>
-                        <div class="text2"><p>#Kinect/Kinectron #threejs #Ethernet Connection #data visualization</p></div>
-                      </div>
-                    </a>
-                    <!-- <a href="index6.html"> -->
-                      <!-- <div class="project">
-                        <img src="pictures/8.jpg" style="width: 350px;height: 350px; object-fit: cover;">
-                        <div class="text"><h1 style="text-shadow: 2px 3px #80B0DA;font-size: 18px;">MASKS-in process</h1></div>
-                        <div class="text2"><p>#A documentary of masks during COVID-19</p></div>
-                      </div> -->
-                    <!-- </a> -->
-                    <div class="decoration-container5" id="anime" style="position: absolute;width: 20%;top: -160px;left: 85%;">
-                      <img src="pictures/cap-2.png" style="width: 350px;">
-                    </div>
-                    <div class="decoration-container6" id="anime" style="position: absolute;width: 20%;top:330px;left: -8%;">
-                      <img src="pictures/n2.png" style="width: 250px;">
-                    </div>
-                </div>
-              </div>
-            </section>
-
-		   <section class="page" id="p3">
-          <div class="section-content" style="background-color: #f5f5f5;">
-          <div class="copy-container2">
-            <h style="font-size: 35px;">Fashion Technology</h>
-            <h1 style="font-size: 23px;">Fashion is moving on. What we wear can express emotions and information.</h1>
-          </div>
-          <div class="images-container">
-          <a href="index5.html">
-            <div class="project">
-              <img src="pictures/tshirt.jpg" style="width: 750px; height: 350px; object-fit: cover;">
-              <div class="text"><h1 style="text-shadow: 2px 3px #ADDFB3;font-size: 18px;">WEAR YOUR SMILE</h1></div>
-              <div class="text2"><p style="font-size: 17px;">#muscle sensor #neopixel LED</p></div>
-            </div>
+           </div>
           </a>
-          <div class="decoration-container" id="anime" style="position: absolute;top:-300px;left: 75%;">
-            <img src="pictures/t2.png" style="width: 700px;">
-          </div>
-          <div class="decoration-container2" id="anime" style="position: absolute;top: 150px;left: -8%;">
-            <img src="pictures/t1.png" style="width: 300px;">
-          </div>
-        </div>
-
-          <!-- <div class="images-container">
-              <a href="index5.html">
-                <div class="project">
-                  <img src="pictures/tshirt.jpg" style="width: 350px; height: 350px; object-fit: cover;">
-                  <div class="text"><h1 style="text-shadow: 2px 3px #ABD6C1;font-size: 18px;">THE TSHIRT IN PANDEMICS</h1></div>
-                  <div class="text2" ><p>#muscle sensor #neopixel</p></div>
-                 </div>
-              </a>
-              <a href="index2.html">
-                <div class="project">
-                  <img src="pictures/tshirt2.jpg" style="width: 350px;height: 350px; object-fit: cover;">
-                  <div class="text"><h1 style="text-shadow: 2px 3px #ABD6C1;font-size: 18px;">HEY! WHERE'S YOUR PHONE -in process</h1></div>
-                  <div class="text2"><p>#Bluetooth #thermochromic ink</p></div>
-                </div>
-              </a>
-              <div class="decoration-container" id="anime" style="position: absolute;top:-200px;left: 85%;">
-                <img src="pictures/t2.png" style="width: 300px;">
-              </div>
-              <div class="decoration-container2" id="anime" style="position: absolute;top: 150px;left: -8%;">
-                <img src="pictures/t1.png" style="width: 300px;">
-              </div>
-          </div> -->
-          </div>
-      </section>
-
-      <section class="page" id="p7">
-       <div class="section-content" style="background-color: #f5f5f5;">
-         <div class="copy-container2">
-           <h style="font-size: 35px;">Web-based Data visualization</h>
-           <h1 style="font-size: 23px;">Build a data story on web space.</h1>
-         </div>
-         <div class="images-container">
-             <a href="index10.html">
-               <div class="project">
-                 <img src="pictures/data-1.jpg" style="width: 750px; height: 350px; object-fit: cover;">
-                 <div class="text"><h1 style="text-shadow: 2px 3px #fae0e4;font-size: 18px;">Sentimental Human, Sentimental Human Knowledge</h1></div>
-                 <div class="text2"><p style="font-size: 17px;">#d3.js #interactive web #data visualization #Javascript</p></div>
+          <a href="/projects/PlasticBooth.html">
+            <div class="container" style="margin-left: 1vw;">
+             <img src="projects/pictures/plastic-1.jpg" style="object-fit: cover;width: 45vw; height: 70vh;">
+               <div class="overlay">
+                 <div class="text" >
+                   <h1 style="font-size: 30px; line-height: 0.2;">Plastic Booth</h1>
+                   <p style="font-size: 20px;">rethink the cafeteria space in a human-centric way</p>
                </div>
-             </a>
-         </div>
-       </div>
-     </section>
+             </div>
+            </div>
+           </a>
+        </div> 
 
-      <section class="page" id="p4">
-         <div class="section-content" style="background-color: #f5f5f5;">
-         <div class="copy-container2">
-           <h style="font-size: 35px;">Physical Computing</h>
-           <h1 style="font-size: 23px;">Hook up some wires. Creative objects can be educational and informative.</h1>
-         </div>
-         <div class="images-container">
-             <a href="index3.html">
-               <div class="project">
-                 <img src="pictures/1.jpg" style="width: 350px; height: 350px; object-fit: cover;">
-                 <div class="text"><h1 style="text-shadow: 2px 3px #F3B7C9;font-size: 18px;">THRIVING GREEN POWER</h1></div>
-                 <div class="text2"><p>#3D-Printing #Rhino #Grasshopper</p></div>
+        <div id="section1" style="height: 70vh;padding: 0vh 4.5vw 2vh 4.5vw; display: flex;flex-wrap: none;">
+          <a href="/projects/Mask.html">
+           <div class="container">
+            <img src="projects/pictures/mask/mask-E.JPG" style="object-fit: cover;width: 45vw; height: 70vh;">
+              <div class="overlay">
+                <div class="text" >
+                  <h1 style="font-size: 30px; line-height: 0.2;">Wear Your Smile</h1>
+                  <p style="font-size: 20px;">wearable technology in connection with emotions</p>
+              </div>
+            </div>
+           </div>
+          </a>
+          <a href="/projects/3D.html">
+            <div class="container" style="margin-left: 1vw;">
+             <img src="projects/pictures/green-1.gif" style="object-fit: cover;width: 45vw; height: 70vh;">
+               <div class="overlay">
+                 <div class="text" >
+                   <h1 style="font-size: 30px; line-height: 0.2;">Thriving Green Power</h1>
+                   <p style="font-size: 20px;">3D computational objects embodiy real-life data</p>
                </div>
-            </a>
-            <a href="index1.html">
-              <div class="project">
-                 <img src="pictures/2.jpg" style="width: 350px;height: 350px; object-fit: cover;">
-                 <div class="text"><h1 style="text-shadow: 2px 3px #F3B7C9;font-size: 18px;">FLOWER TIMER</h1></div>
-                 <div class="text2"><p>#Arduino #Processing #ConductiveSensor</p></div>
-              </div>
-            </a>
-             <div class="decoration-container3" id="anime" style="position: absolute;width: 20%;top:-200px;left: 85%;">
-               <img src="pictures/p1.png" style="width: 300px;">
              </div>
-             <div class="decoration-container4"  id="anime" style="position: absolute;width: 20%;top: 250px;left: -8%;">
-               <img src="pictures/p2.png" style="width: 300px;">
+            </div>
+           </a>
+        </div> 
+
+        <div id="section1" style="height: 70vh;padding: 0vh 4.5vw 2vh 4.5vw; display: flex;flex-wrap: none;">
+          <a href="/projects/data.html">
+           <div class="container">
+            <img src="projects/pictures/data-story.png" style="object-fit: cover;width: 45vw; height: 70vh;">
+              <div class="overlay">
+                <div class="text" >
+                  <h1 style="font-size: 30px; line-height: 0.2;">Sentimental Data</h1>
+                  <p style="font-size: 20px;">explore the human sentiments in Wikipedia data</p>
+              </div>
+            </div>
+           </div>
+          </a>
+          <!-- <a href="/projects/music.html">
+            <div class="container" style="margin-left: 1vw;">
+             <img src="projects/pictures/music.jpg" style="object-fit: cover;width: 45vw; height: 70vh;">
+               <div class="overlay">
+                 <div class="text" >
+                   <h1 style="font-size: 30px; line-height: 0.2;">Music Graffiti</h1>
+                   <p style="font-size: 20px;">a motion-tracking music interface </p>
+               </div>
              </div>
-         </div>
-         </div>
-     </section>
+            </div>
+           </a> -->
+           <a href="/projects/UX.html">
+            <div class="container" style="margin-left: 1vw;">
+             <img src="projects/pictures/hrl.jpg" style="object-fit: cover;width: 45vw; height: 70vh;">
+               <div class="overlay">
+                 <div class="text" >
+                   <h1 style="font-size: 30px; line-height: 0.2;">Website UX Design</h1>
+                   <p style="font-size: 20px;">a flexible, real-time data visualization tool for historical research</p>
+               </div>
+             </div>
+            </div>
+           </a>
+        </div> 
 
-     <section class="page" id="p5">
-      <div class="section-content" style="background-color: #f5f5f5;">
-        <div class="copy-container2">
-          <h style="font-size: 35px;">Live Performance with Digital Interface</h>
-          <h1 style="font-size: 23px;">Innovative way of performing arts.</h1>
-        </div>
-        <div class="images-container">
-            <a href="index6.html">
-              <div class="project">
-                <img src="pictures/m1.jpg" style="width: 750px; height: 350px; object-fit: cover;">
-                <div class="text"><h1 style="text-shadow: 2px 3px #FBEAB3;font-size: 18px;">MUSIC GRAFFITI</h1></div>
-                <div class="text2"><p style="font-size: 17px;">#p5.js #design interface #pose recognition #MIDI</p></div>
+        <!-- <div id="section1" style="height: 70vh;padding: 0vh 4.5vw 2vh 4.5vw; display: flex;flex-wrap: none;">
+          <a href="/projects/MirrorLoss.html">
+           <div class="container">
+            <img src="projects/pictures/dis-1.JPG" style="object-fit: cover;width: 45vw; height: 70vh;">
+              <div class="overlay">
+                <div class="text" >
+                  <h1 style="font-size: 30px; line-height: 0.2;">Immersive Experience</h1>
+                  <p style="font-size: 20px;">to unpack the perspective of disability and invoke empathy</p>
               </div>
-            </a>
-        </div>
-      </div>
-    </section>
+            </div>
+           </div>
+          </a>
+        </div>  -->
 
-
-      <section class="page" id="p6">
-        <div class="section-content" style="background-color: #f5f5f5;">
-          <div class="copy-container2">
-            <h style="font-size: 35px;">Design and Photography</h>
-            <h1 style="font-size: 23px;">Work and fun.</h1>
+      
+        
+          
+        <!-- flower
+          <div id="section6" style="height: 80vh;padding: 10vh 5vw; display: flex;flex-wrap: none;">
+          <img src="projects/pictures/draw-flower2.png" style="object-fit: cover; width: 58vw;">
+          <div style="padding: 10vh 5vw 0 5vw">
+            <h2 style="font-size: 45px;">Flower Timer</h2>
+            
+            <p style="font-size: 20px;line-height: 1.3;">This is an installation project that links human physical interaction
+              with an animation of flowers in different conditions.
+            <br><br><br>
+            <button class="button"><span><a href="/projects/flower.html" style="text-decoration: none;">view more</a></span></button>
           </div>
-          <div class="images-container">
-              <a href="index4.html">
-                <div class="project">
-                  <img src="pictures/9.jpg" style="width: 350px; height: 350px; object-fit: cover;">
-                  <div class="text"><h1 style="text-shadow: 2px 3px #D5BDED;font-size: 18px;">BROCHURE DESIGN</h1></div>
-                  <div class="text2"><p>#Adobe Suite</p></div>
-                </div>
-              </a>
-              <a href="index2.html">
-                <div class="project">
-                  <img src="pictures/10.jpg" style="width: 350px;height: 350px; object-fit: cover;">
-                  <div class="text"><h1 style="text-shadow: 2px 3px #D5BDED;font-size: 18px;">FILM PHOTOGRAPHY</h1></div>
-                  <div class="text2"><p>#hobby</p></div>
-                </div>
-              </a>
-              <div class="decoration-container7" id="anime" style="position: absolute;width: 20%;top: -150px;right:-20%;">
-                <img src="pictures/d1.png" style="width: 150px;">
-              </div>
-              <div class="decoration-container8" id="anime" style="position: absolute;width: 20%;top:250px;left: -10%;">
-                <img src="pictures/d2.png" style="width: 200px;">
-              </div>
+        </div>     -->
+        
+        <!-- footer -->
+          <div style="height: 200px;margin: 20vh 45vw 5vh 45vw;">
+            <p style="padding-top: 200px;font-size: 20px;">created@2020</p>
           </div>
-        </div>
-      </section>
-    </div>
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
-        <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
-		<script type="text/javascript" src="js/onepagescroll/jquery.onepage-scroll.js"></script>
-		<link href='js/onepagescroll/onepage-scroll.css' rel='stylesheet' type='text/css'>
-        <script src="js/main.js"></script>
+  
+       
+  
 
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
-            var _gaq=[['_setAccount',''],['_trackPageview']];
-            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-            g.src='//www.google-analytics.com/ga.js';
-            s.parentNode.insertBefore(g,s)}(document,'script'));
-        </script>
-    </body>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300&display=swap" rel="stylesheet">
+
+  </body>
 </html>

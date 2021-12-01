@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Project View - Wear Your Smile</title>
+
+    <link rel="stylesheet" href="/style.css" />
+
+    <style>
+      .parallax-2 {
+        background-image:url("pictures/shirt-4.gif");
+        background-position: center;
+        background-size: 350px;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        min-height: 350px;
+      }
+      #pic-4{
+        position: absolute;
+        margin-top: 100px;
+        margin-left: 100px;
+        width: 450px;
+      }
+
+      .video{
+        position: absolute;
+        left:480px;
+        margin-top:180px;
+        width: 50px;
+        height:auto;
+      }
+
+      .tablink {
+        background-color: #555;
+        color: white;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        font-size: 17px;
+        width: 33.3%;
+      }
+
+      .tablink:hover {
+        background-color: #777;
+      }
+
+      /* Style the tab content */
+      .tabcontent {
+        height:450px;
+        padding: 50px;
+      }
+
+      .tabText{
+        color: black;
+        position: absolute;
+        margin-top: 150px;
+        margin-left: 45%;
+        width:300px;
+        text-align: center;
+      }
+
+      #Yellow {background-color:#FFD932;}
+      #Pink {background-color:#F09AC7;}
+      #Blue {background-color:#73C0F9;}
+
+
+    </style>
+
+  </head>
+
+  <body>
+    <div style="background-color: transparent;height: 5vh;margin: 0 0 5vh 0;">
+          <div style="position: fixed; display: flex; padding: 20px; color: #343a40;
+                      overflow: hidden;background-color:transparent;">
+              <div style="margin-left: 2vw;">
+                <a href="/index.html">
+                  <img src="/projects/pictures/logo.png" style="width:80px;">
+                </a>
+              </div>
+              <!-- <div style="margin-left: 75vw">
+                <ul class="breadcrumb">
+                  <li><a href=""></a></li>
+                  <li><a href="intro.html">About</a></li>
+                  <li><a href=""></a></li>
+              </ul>
+              </div> -->
+          </div>
+        </div>
+
+
+      <!-- lines + intro -->
+
+      <div style="width: 90vw; margin: 15vh 5vw 10vh 5vw; background-color:transparent;display: flex;">
+        <div style="width: 30vw; padding: 15vh 5vw; text-align:left;background-color: transparent;">
+          <h3 style="font-size: 35px;">Wear Your Smile</h3>
+          <p style="font-size: 20px;">
+            Wear Your Smile is a wireless wearable project that connects sensory data with emotional expression. 
+            It detects smiles and expresses them by LEDs. 
+            <br><br>
+            It creates an alternative way to express kindness during pandemic times when people can't see 
+            each other's faces with masks. 
+          </p>
+        </div>
+          <img src="pictures/mask/mask-A.JPG" style="width: 55vw; height: 70vh; object-fit: cover;"></img>
+      </div>
+
+
+      <!-- video  -->
+        <iframe  style="width: 60vw; height: 80vh; margin: 10vh 20vw 20vh 20vw;"
+                   src="https://www.youtube.com/embed/qZIwhX7cF8c"></iframe>
+
+        
+      <!-- background -->
+
+      <div style="width: 80vw; margin-left: 10vw; display: flex;">
+        <div style="width: 25vw; padding: 20px; margin-right: 30px;">
+          <h2 style="font-size: 30px;">Background</h2>
+        </div>
+
+        <div style="width: 55vw; padding: 15px;">
+          <p style="font-size: 20px;">
+            <b>Context: </b>2020 has been a year of a huge tremble. The COVID-19 wasn't the first global pandemic, 
+            and it won't be the last one. Our generation might have to face new "norms" of living in the near future: 
+            social distancing rules, remote learning and working, and wearing protective gear such as masks. 
+            When is the next global catastrophic tremble? <span id="link">How our life will be if one-day humans have to cocoon 
+            themselves with masks and gloves to survive?</span>
+            <br><br>            
+            <b>Goal:</b> We are already living in one of these realities where seeing each other's face is a 
+            luxury and we already lost one essential norm: <span id="link">the ability to communicate with one and another 
+            through facial emotional expressions.</span> Therefore I created Wear Your Smile to emphasize the gesture 
+            of smiling as an important part of community bonding.
+              
+          </p>
+        </div>
+      </div>
+
+      <!-- Research & Design -->
+
+      <div style="width: 80vw; margin: 10vh 10vw 0vh 10vw; display: flex;">
+        <div style="width: 25vw; padding: 20px; margin-right: 30px;">
+          <h2 style="font-size: 30px;">Research & Design</h2>
+        </div>
+
+        <div style="width: 55vw; padding: 15px;">
+          <p style="font-size: 20px;">
+            <b>Firstly</b>, I tested with MyoWare Muscle Sensor touching the cheek to detect the movement of smiling. I found out that 
+            the <a href="https://en.wikipedia.org/wiki/Zygomaticus_major_muscle" style="text-decoration: none;">
+            zygomaticus major muscle</a> is a muscle of of facial expression which draws the angle of the mouth to allow one to smile.
+            <span id="link">By placing the electrodes along the muscle, electric impulses that result in muscle activation are detected.</span>
+            It offers me accurate data when a smile activity takes place.
+            <br><br>
+
+            <br><br>
+            <b>Secondly</b>, <span id="link">I built the smile detecting system on a facial mask, and a LED signal expression system on a t-shirt
+            with conductive thread and sewable electronics.</span> When a smile is detected by the mask, the sensory data 
+            is wirelessly sent to the t-shirt. I designed 3 LED patterns to express the moments of 'not smiling', 'smiling' and 'total smiling time':
+            <br><br>
+            <b>></b> yellow arrow: the pattern of the yellow arrow continues to loop non-stop, representing the time passing
+            <br><br>
+            <b>></b> pink pattern: the pink only appears when a smile is detected, expressing the idea that the person is 
+            having a good time
+            <br><br>
+            <b>></b> blue pattern: the blue pattern will appear once the user finishes using this product and turns off the sensor. 
+            Each blue LEDs represent 15 minutes of smiling time
+          </p>
+        </div>
+      </div>
+      <!-- Project Design -->
+
+        <!-- <div style="width: 80vw; margin: 10vh 10vw 0vh 10vw; display: flex;">
+          <div style="width: 25vw; padding: 20px; margin-right: 30px;">
+            <h2 style="font-size: 30px;">Research & Process</h2>
+          </div>
+
+          <div style="width: 55vw; padding: 15px;">
+            <img src="pictures/shirt-3.jpeg" style="width: 50vw; margin-left: -50px;">
+          </div>
+        </div> -->
+     
+
+        <div class="parallax-2"></div> 
+        <!-- <img src="pictures/shirt-4.gif" style="width: 50vw; margin-left: -50px;"> -->
+
+        <div style="width: 90vw; height: 60vh; margin-top: 20vh; margin-bottom: 20vh; background-color: transparent;display: flex;">
+          <div>
+            <a href="https://melindaozel.com/zygomaticus-major-variations-the-dimple/">
+              <img src="/projects/pictures/mask-1.png" style="margin-left: 12vw; width:30vw; height: 60vh; object-fit: cover;">
+            </a>
+            <p style="text-align: right;">Zygomaticus Muscle diagram</p>
+          </div>
+          <div>
+            <a href="https://imotions.com/blog/zygomaticus-major/">
+              <img src="/projects/pictures/mask-2.png" style="margin-left: 12vw; width:30vw; height: 60vh; object-fit: cover;">
+            </a>
+            <p style="text-align: right; font-style: italic;">Zygomaticus Major: <br> Relating Muscle Movement to Emotion </p>
+          </div>
+        </div>
+
+        <div style="width: 80vw; margin: 10vh 10vw 30vh 10vw;">
+          <img src="pictures/shirt-6.png" id="pic-4">
+            <div id="Yellow" class="tabcontent">
+                <video src="video/yellow.mov" autoplay muted loop class="video"></video>
+              <div class="tabText">
+              <h2 style="font-size: 20px;">the pattern of the yellow arrow continues to loop non-stop, representing the time passing</h2>
+            </div>
+                </div>
+          
+            <div id="Pink" class="tabcontent">
+              <video src="video/red.mov" autoplay muted loop class="video"></video>
+          <div class="tabText">
+              <h2 style="font-size: 20px;">Pink pattern only appears when a smile is detected, expressing the idea
+             that the person is having a good time</h2>
+           </div>
+            </div>
+          
+          <div id="Blue" class="tabcontent">
+              <video src="video/blue.mov" autoplay muted loop class="video"></video>
+            <div class="tabText">
+              <h2 style="font-size: 20px;">Blue pattern will appear once the user finishes using. The number of ellipses is proportional to the amount
+               of time spent on smiling</h2>
+            </div>
+            </div>
+            <button class="tablink" onclick="openCity('Yellow', this, '#FFD932')" id="defaultOpen"><p1>Yellow Arrow</p1></button>
+            <button class="tablink" onclick="openCity('Pink', this, '#F09AC7')"><p1>Pink Pattern</p1></button>
+            <button class="tablink" onclick="openCity('Blue', this, '#73C0F9')"><p1>Blue Pattern</p1></button>
+          </div>
+
+                <!-- Outcome -->
+
+      <div style="width: 80vw; margin: 10vh 10vw 20vh 10vw; display: flex;">
+        <div style="width: 25vw; padding: 20px; margin-right: 30px;">
+          <h2 style="font-size: 30px;">Outcome</h2>
+        </div>
+
+        <div style="width: 55vw; padding: 15px;">
+          <p style="font-size: 20px;">
+            Wear Your Smile makes it possible to give emotions, meanings to digital fabrication and 
+            signals in a global pandemic time. It helps us to rethink the social significance of our emotional expressions, 
+            and also how fashion technology is offering us a new perspective of unique identity.
+          </p>
+        </div>
+      </div>
+        
+      <!-- photos -->
+        <div style="width: 80vw; margin-left: 10vw;">
+
+
+            <img src="pictures/mask/mask-H.JPG" style="width: 60vw; margin-top: 5vh; margin-left: 19vw;"></img>
+            <img src="pictures/mask/mask-A.JPG" style="width: 60vw; margin-top: 5vh; margin-left: 0vw;"></img>
+
+            <img src="pictures/mask/mask-C.JPG" style="width: 60vw; margin-top: 5vh; margin-left: 19vw;"></img>
+            <img src="pictures/mask/mask-D.JPG" style="width: 60vw; margin-top: 5vh; margin-left: 0vw;"></img>
+      
+            <img src="pictures/mask/mask-E.JPG" style="width: 60vw; margin-top: 5vh; margin-left: 19vw;"></img>
+            <img src="pictures/mask/mask-G.JPG" style="width: 60vw; margin-top: 5vh; margin-left: 0vw;"></img>
+
+        </div>
+ 
+
+        <br>
+
+  
+
+  </body>
+  <script type="text/javascript">
+
+    function openCity(cityName,elmnt,color) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablink");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+      }
+      document.getElementById(cityName).style.display = "block";
+      elmnt.style.backgroundColor = color;
+    }
+
+    document.getElementById("defaultOpen").click();
+  </script>
+<br>
+<br>
+<br>
+<br>
+</html>
