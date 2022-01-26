@@ -93,15 +93,39 @@
       <!-- lines + intro -->
 
       <div style="width: 90vw; margin: 15vh 5vw 10vh 5vw; background-color:transparent;display: flex;">
-        <div style="width: 30vw; padding: 15vh 5vw; text-align:left;background-color: transparent;">
+        <div style="width: 30vw; padding: 0vh 5vw; text-align:left;background-color: transparent;line-height: 0.3;">
           <h3 style="font-size: 35px;">Wear Your Smile</h3>
-          <p style="font-size: 20px;">
-            Wear Your Smile is a wireless wearable project that connects sensory data with emotional expression. 
-            It detects smiles and expresses them by LEDs. 
-            <br><br>
-            It creates an alternative way to express kindness during pandemic times when people can't see 
-            each other's faces with masks. 
-          </p>
+          <br>
+          <p style="font-size: 20px;">Class Project - Individual</p>
+          <br><br><br>
+          <div style="display: flex;">
+            <div>
+              <p><b>Type</b></p>
+              <p>Wearable Technology</p>
+            </div>
+            <div style="margin-left: 50px;">
+              <p><b>Year</b></p>
+              <p>2020</p>
+            </div>
+          </div>
+          <div>
+            <div>
+              <p><b>Skills</b></p>
+              <p>Arduino</p>
+              <p>Bluetooth</p>
+              <p>Physical and Interface Design</p>
+              <p>Soft Circuit</p>
+            </div>
+          </div>
+          <br><br>
+          <div>
+            <p><b>Introduction</b></p>
+            <p style="line-height: normal;">
+              Wear Your Smile is a wireless wearable project that con- nects sensory data with emotional expression, 
+              detecting smiles and expressing them by LEDs. It creates an alter- native way to express kindness 
+              during pandemic time when people can’t see each other’s faces with masks.
+            </p>
+          </div>
         </div>
           <img src="pictures/mask/mask-A.JPG" style="width: 55vw; height: 70vh; object-fit: cover;"></img>
       </div>
@@ -131,16 +155,17 @@
             luxury and we already lost one essential norm: <span id="link">the ability to communicate with one and another 
             through facial emotional expressions.</span> Therefore I created Wear Your Smile to emphasize the gesture 
             of smiling as an important part of community bonding.
-              
           </p>
         </div>
       </div>
+
+      <img src="pictures/mask/mask-I.png" style="width: 60vw; margin-left: 20vw;"></img>
 
       <!-- Research & Design -->
 
       <div style="width: 80vw; margin: 10vh 10vw 0vh 10vw; display: flex;">
         <div style="width: 25vw; padding: 20px; margin-right: 30px;">
-          <h2 style="font-size: 30px;">Research & Design</h2>
+          <h2 style="font-size: 30px;">Research & Analysis</h2>
         </div>
 
         <div style="width: 55vw; padding: 15px;">
@@ -150,51 +175,46 @@
             zygomaticus major muscle</a> is a muscle of of facial expression which draws the angle of the mouth to allow one to smile.
             <span id="link">By placing the electrodes along the muscle, electric impulses that result in muscle activation are detected.</span>
             It offers me accurate data when a smile activity takes place.
-            <br><br>
 
+            <div>
+              <a href="https://melindaozel.com/zygomaticus-major-variations-the-dimple/">
+                <img src="/projects/pictures/mask-1.png" style="margin: 5vh 0vw 0vh 12vw; width:20vw;">
+              </a>
+              <p style="text-align: center; margin-bottom: 5vh;">Zygomaticus Muscle diagram</p>
+            </div>
+          </p>
+          <p style="font-size: 20px;">
+
+            Measuring muscle activation via electric potential, referred to as <b>electromyography (EMG)</b>, has been traditionally used for medical research and diagnosis of neuromuscular disorders.
+            I tested with MyoWare Muscle Sensor touching the cheek to detect the movement of smiling by:
             <br><br>
-            <b>Secondly</b>, <span id="link">I built the smile detecting system on a facial mask, and a LED signal expression system on a t-shirt
-            with conductive thread and sewable electronics.</span> When a smile is detected by the mask, the sensory data 
-            is wirelessly sent to the t-shirt. I designed 3 LED patterns to express the moments of 'not smiling', 'smiling' and 'total smiling time':
+            a. cleaning the target muscle area;<br>         
+            b. applying the electrodes in the direction of the muscle; <br>
+            c. placing the reference electrode near targeted muscle; <br>
+            d. connecting to Arduino;
             <br><br>
-            <b>></b> yellow arrow: the pattern of the yellow arrow continues to loop non-stop, representing the time passing
+            Based on the EMG signal output, I get to examine the ac- tivation of the zygomaticus major muscle when I smile, and divide the activity into 3 stages:
             <br><br>
-            <b>></b> pink pattern: the pink only appears when a smile is detected, expressing the idea that the person is 
-            having a good time
-            <br><br>
-            <b>></b> blue pattern: the blue pattern will appear once the user finishes using this product and turns off the sensor. 
-            Each blue LEDs represent 15 minutes of smiling time
+            <img src="pictures/mask/mask-J.png" style="margin: 5vh 0vw 0vh 0vw; width:50vw;">
           </p>
         </div>
       </div>
-      <!-- Project Design -->
 
-        <!-- <div style="width: 80vw; margin: 10vh 10vw 0vh 10vw; display: flex;">
-          <div style="width: 25vw; padding: 20px; margin-right: 30px;">
-            <h2 style="font-size: 30px;">Research & Process</h2>
-          </div>
-
-          <div style="width: 55vw; padding: 15px;">
-            <img src="pictures/shirt-3.jpeg" style="width: 50vw; margin-left: -50px;">
-          </div>
-        </div> -->
      
 
-        <div class="parallax-2"></div> 
-        <!-- <img src="pictures/shirt-4.gif" style="width: 50vw; margin-left: -50px;"> -->
-
-        <div style="width: 90vw; height: 60vh; margin-top: 20vh; margin-bottom: 20vh; background-color: transparent;display: flex;">
-          <div>
-            <a href="https://melindaozel.com/zygomaticus-major-variations-the-dimple/">
-              <img src="/projects/pictures/mask-1.png" style="margin-left: 12vw; width:30vw; height: 60vh; object-fit: cover;">
-            </a>
-            <p style="text-align: right;">Zygomaticus Muscle diagram</p>
-          </div>
-          <div>
-            <a href="https://imotions.com/blog/zygomaticus-major/">
-              <img src="/projects/pictures/mask-2.png" style="margin-left: 12vw; width:30vw; height: 60vh; object-fit: cover;">
-            </a>
-            <p style="text-align: right; font-style: italic;">Zygomaticus Major: <br> Relating Muscle Movement to Emotion </p>
+        <div class="parallax-2"></div>  
+        <div style="width: 80vw; margin: 10vh 10vw 0vh 10vw; display: flex;"> 
+          <div style="width: 25vw; padding: 20px; margin-right: 30px;">
+            <h2 style="font-size: 30px;">Project Design</h2>
+          </div> 
+          <div style="width: 55vw; padding: 15px;">
+            <p style="font-size: 20px;">
+                <span id="link">I built the smile detecting system on a facial mask, and a LED signal expression system on a t-shirt
+                with conductive thread and sewable electronics.</span> When a smile is detected by the mask, the sensory data 
+                is wirelessly sent to the t-shirt. I designed 3 LED patterns to express the moments of 'not smiling', 'smiling' and 'total smiling time':
+                <br><br>
+                <img src="pictures/mask/mask-K.png" style="width:65vw; margin-top: 30px; margin-left: -50px;">       
+            </p>
           </div>
         </div>
 
@@ -203,14 +223,14 @@
             <div id="Yellow" class="tabcontent">
                 <video src="video/yellow.mov" autoplay muted loop class="video"></video>
               <div class="tabText">
-              <h2 style="font-size: 20px;">the pattern of the yellow arrow continues to loop non-stop, representing the time passing</h2>
+              <h2 style="font-size: 20px;">Yellow arrow continues to loop non-stop, representing the time passing</h2>
             </div>
                 </div>
           
             <div id="Pink" class="tabcontent">
               <video src="video/red.mov" autoplay muted loop class="video"></video>
           <div class="tabText">
-              <h2 style="font-size: 20px;">Pink pattern only appears when a smile is detected, expressing the idea
+              <h2 style="font-size: 20px;">Pink shape only appears when a smile is detected, expressing the idea
              that the person is having a good time</h2>
            </div>
             </div>
@@ -218,15 +238,22 @@
           <div id="Blue" class="tabcontent">
               <video src="video/blue.mov" autoplay muted loop class="video"></video>
             <div class="tabText">
-              <h2 style="font-size: 20px;">Blue pattern will appear once the user finishes using. The number of ellipses is proportional to the amount
-               of time spent on smiling</h2>
+              <h2 style="font-size: 20px;">Blue scatter will appear after using this product as a summary of the experience. Each blue LEDs represent 15 minutes of smiling time</h2>
             </div>
             </div>
             <button class="tablink" onclick="openCity('Yellow', this, '#FFD932')" id="defaultOpen"><p1>Yellow Arrow</p1></button>
-            <button class="tablink" onclick="openCity('Pink', this, '#F09AC7')"><p1>Pink Pattern</p1></button>
-            <button class="tablink" onclick="openCity('Blue', this, '#73C0F9')"><p1>Blue Pattern</p1></button>
+            <button class="tablink" onclick="openCity('Pink', this, '#F09AC7')"><p1>Pink Shape</p1></button>
+            <button class="tablink" onclick="openCity('Blue', this, '#73C0F9')"><p1>Blue Scatter</p1></button>
           </div>
 
+          <div style="width: 80vw; margin: 10vh 10vw 0vh 10vw; display: flex;"> 
+            <div style="width: 25vw; padding: 20px; margin-right: 30px;">
+              <h2 style="font-size: 30px;">Hardware Development</h2>
+            </div> 
+            <div style="width: 55vw; padding: 15px;">
+              <img src="pictures/mask/mask-L.png" style="width:50vw;"> 
+            </div>
+          </div>
                 <!-- Outcome -->
 
       <div style="width: 80vw; margin: 10vh 10vw 20vh 10vw; display: flex;">
@@ -236,9 +263,11 @@
 
         <div style="width: 55vw; padding: 15px;">
           <p style="font-size: 20px;">
-            Wear Your Smile makes it possible to give emotions, meanings to digital fabrication and 
-            signals in a global pandemic time. It helps us to rethink the social significance of our emotional expressions, 
-            and also how fashion technology is offering us a new perspective of unique identity.
+            Wear Your Smile allows us to show emotions, bring meanings to digital fabracation, and signals our 
+           friendliness in a global pandemic time.
+            <br><br>
+           It helps us to rethink the social significance of our emotional expressions, and also how fashion technology 
+           is offering us <span id="link">a new perspective of unique identity.</span>
           </p>
         </div>
       </div>
